@@ -1,12 +1,28 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
-	"keywords": ["framework", "laravel"],
-	"license": "MIT",
+	"name": "MysticIndia",
+	"description": "Flourishing real estate agent in navi mumbai.",
+	"keywords": ["mystic", "mystic india"],
+	"license": "proprietary",
 	"type": "project",
 	"require": {
-		"laravel/framework": "4.2.*"
+		"laravel/framework": "4.2.*",
+        "zizaco/entrust": "1.2.*@dev",
+        "zizaco/confide": "~4.3@dev",
+        "maatwebsite/excel": "1.*",
+        "fintech-fab/laravel-queue-rabbitmq": "4.2",
+        "Chumper/Zipper": "0.5.0",
+        "davejamesmiller/laravel-breadcrumbs": "2.*",
+        "teepluss/theme": "1.*@dev",
+        "anouar/fpdf": "1.0.1",
+        "barryvdh/laravel-dompdf": "0.4.*",
+        "intervention/image": "~2.2"
 	},
+  "require-dev": {
+    "barryvdh/laravel-ide-helper": "1.11.*@dev",
+    "barryvdh/laravel-debugbar": "1.8.*@dev",
+    "way/generators": "~2.0",
+    "xethron/migrations-generator": "dev-master"
+  },
 	"autoload": {
 		"classmap": [
 			"app/commands",
@@ -24,6 +40,7 @@
 		],
 		"post-update-cmd": [
 			"php artisan clear-compiled",
+            "php artisan ide-helper:generate",
 			"php artisan optimize"
 		],
 		"post-create-project-cmd": [

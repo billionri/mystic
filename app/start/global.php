@@ -48,7 +48,32 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 
 App::error(function(Exception $exception, $code)
 {
-	Log::error($exception);
+//	Log::error($exception); //commented by Rashid
+    //added by Rashid
+    $pathInfo = Request::getPathInfo();
+    $message = $exception->getMessage() ?: 'Exception';
+    Log::error("$code - $message @ $pathInfo\r\n$exception");
+    if (Config::get('app.debug')) {
+        return;
+    }
+    // check if will use admin error template
+    //$admin = Auth::check() ? 'core::' : '';
+//	dd(compact('message'));
+    switch ($code)
+    {
+        case 403:
+            return Response::view('core::errors/403', compact('message'), 403);
+
+
+        case 500:
+            //return Response::view('core::errors/500', compact('message'), 500);
+            $theme = \Theme::uses(\Config::get('app.theme'))->layout('500');
+            return $theme->render();
+        default:
+            //  return Response::view('core::errors/404', compact('message'), $code);
+            $theme = \Theme::uses(\Config::get('app.theme'))->layout('404');
+            return $theme->render();
+    }
 });
 
 /*

@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => false,
+	'debug' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -39,8 +39,8 @@ return array(
 	|
 	*/
 
-	'timezone' => 'UTC',
-
+//	'timezone' => 'UTC',
+    'timezone' => 'Asia/Kolkata',
 	/*
 	|--------------------------------------------------------------------------
 	| Application Locale Configuration
@@ -78,7 +78,7 @@ return array(
 	|
 	*/
 
-	'key' => 'YourSecretKey!!!',
+	'key' => '8DSg4uZUTKaHjPXey75a',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -121,7 +121,7 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-
+        'Mystic\Dashboard\DashboardServiceProvider'
 	),
 
 	/*
