@@ -1,8 +1,8 @@
-<?php namespace Mystic\Dashboard;
+<?php namespace Mystic\Frontend;
 
 use Illuminate\Support\ServiceProvider;
 
-class DashboardServiceProvider extends ServiceProvider {
+class FrontendServiceProvider extends ServiceProvider {
 
 	/**
 	 * Indicates if loading of the provider is deferred.
@@ -17,9 +17,9 @@ class DashboardServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function boot()
-	{ 
-	$this->package('mystic/dashboard');
-        include __DIR__ . '/../../routes.php';
+	{
+		$this->package('mystic/frontend');
+		include __DIR__ . '/../../routes.php';
 	}
 
 	/**
