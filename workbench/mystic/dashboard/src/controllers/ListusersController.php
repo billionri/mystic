@@ -59,5 +59,6 @@ class ListusersController extends \BaseController {
         $excel_user_list = new Reports();
         $excel_user_list->downloadExcelUsersList();
 
+        return \Redirect::route('pages.layout.data')->with('message', array('type' => 'success', 'text' => 'User Updated Successfully.'));
     }
 }
