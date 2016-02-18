@@ -120,8 +120,9 @@ return array(
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
+        'Maatwebsite\Excel\ExcelServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-       		'Mystic\Dashboard\DashboardServiceProvider',
+       	'Mystic\Dashboard\DashboardServiceProvider',
 		'Mystic\Frontend\FrontendServiceProvider'
 	),
 
@@ -189,7 +190,7 @@ return array(
 		'URL'               => 'Illuminate\Support\Facades\URL',
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
-
+        'Excel'             => 'Maatwebsite\Excel\Facades\Excel',
 	),
 
 );

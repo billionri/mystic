@@ -1,7 +1,6 @@
 <?php
 namespace Mystic\Listusers\Models;
 
-use Illuminate\Database\Eloquent\SoftDeletingTrait;
 
 class Listusers extends \Eloquent
 {

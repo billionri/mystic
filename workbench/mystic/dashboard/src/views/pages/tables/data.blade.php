@@ -21,8 +21,12 @@
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">Mystic Users Table</h3>
+                <div class="pull-right" >
+                    <a href="{{route('excel_report_user_list')}}" class="btn btn-success" title="Download Excel"><i class="fa fa-download"></i></a>
+                </div>
             </div>
             <!-- /.box-header -->
+
             <div class="box-body">
                 <table id="btable" class="table table-bordered" data-toggle="table" data-url="{{\URL::route('mystic_list')}}"
                        data-side-pagination="server" data-pagination="true"

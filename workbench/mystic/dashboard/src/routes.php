@@ -13,3 +13,4 @@ Route::get('data/', array( 'as' => 'pages.layout.data', 'uses' => 'Mystic\Dashbo
 Route::get('/mystic/list', array('as' => 'mystic_list', 'uses' => 'Mystic\Listusers\Controllers\ListusersController@mystic_list'));
 Route::get('/mystic/edit/{id}', array('as' => 'edit_mystic', 'uses' => 'Mystic\Listusers\Controllers\ListusersController@edit'));
 Route::post('/mystic/edit/{id}', array('as' => 'post_edit_mystic', 'uses' => 'Mystic\Listusers\Controllers\ListusersController@update'));
+Route::get('/mystic/reports/excel-users-list', array('as' => 'excel_report_user_list', 'uses' => 'Mystic\Listusers\Controllers\ListusersController@downloadExcelUsersList'));

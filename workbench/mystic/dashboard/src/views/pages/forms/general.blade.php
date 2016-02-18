@@ -36,42 +36,43 @@
                     <label for="inputName" class="col-sm-2 control-label">Name</label>
 
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" readonly id="inputName" value="{{$listusers_part->name}}" placeholder="Name">
+                        <input type="text" class="form-control" readonly id="inputName" name="inputName" value="{{$listusers_part->name}}" placeholder="Name">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputContact" class="col-sm-2 control-label">Contact</label>
 
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" readonly id="inputContact" value="{{$listusers_part->contact}}" placeholder="Contact">
+                        <input type="text" class="form-control" readonly id="inputContact" name="inputContact" value="{{$listusers_part->contact}}" placeholder="Contact">
                     </div>
                 </div>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
 
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" readonly id="inputEmail3" value="{{$listusers_part->email}}" placeholder="Email">
+                    <input type="email" class="form-control" readonly id="inputEmail3" name="inputEmail3" value="{{$listusers_part->email}}" placeholder="Email">
                   </div>
                 </div>
                   <!-- textarea -->
                   <div class="form-group">
                       <label for="message" class="col-sm-2 control-label">Message</label>
                       <div class="col-sm-10">
-                          <textarea class="form-control" rows="3" readonly id="message"  placeholder="Message ...">{{$listusers_part->message}}</textarea>
+                      <div class="col-sm-10">
+                          <textarea class="form-control" rows="3" readonly id="message" name="message"  placeholder="Message ...">{{$listusers_part->message}}</textarea>
                       </div>
                   </div>
                   <!-- textarea -->
                   <div class="form-group">
                       <label for="feedback" class="col-sm-2 control-label">Feedback</label>
                       <div class="col-sm-10">
-                          <textarea class="form-control" rows="3" id="feedback"  placeholder="Feedback ...">{{$listusers_part->feedback}}</textarea>
+                          <textarea class="form-control" rows="3" id="feedback" name="feedback" placeholder="Feedback ...">{{$listusers_part->feedback}}</textarea>
                       </div>
                   </div>
               </div>
               <!-- /.box-body -->
               <div class="box-footer">
                 <button type="submit" class="btn btn-info pull-left">Submit</button>
-                <button type="submit" class="btn btn-default pull-right"><a href="{{route('pages.layout.data')}}">Cancel</a> </button>
+                  <a href="{{route('pages.layout.data')}}"><button type="submit" class="btn btn-default pull-right">Cancel </button></a>
               </div>
               <!-- /.box-footer -->
             </form>

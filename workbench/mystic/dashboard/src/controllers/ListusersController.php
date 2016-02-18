@@ -2,6 +2,7 @@
 
 namespace Mystic\Listusers\Controllers;
 use Mystic\Listusers\Models\Listusers;
+use Mystic\Reports\Models\Reports;
 
 class ListusersController extends \BaseController {
 
@@ -45,19 +46,18 @@ class ListusersController extends \BaseController {
         return \View::make('dashboard::pages.forms.general', array('listusers_part' => $listusers_part));
     }
 
-    public function update($id)
+    public function update($user_id)
     {
-//        $input = \Input::all();
-//        $user_id = \Input::get('id');
-//        $mysedit = Listusers::find($id);
-//        $input['feedback']=strip_tags($input['feedback']);
-//
-//
-//
-//
-//            $mysedit->save();
-            return \Redirect::route('pages.layout.data')->with('message', array('type' => 'success', 'text' => 'User Updated Successfully.'));
-
+    $input = \Input::all();
+        $mysedit = Listusers::find($user_id);
+        $mysedit->feedback=strip_tags($input['feedback']);
+        $mysedit->save();
+        return \Redirect::route('pages.layout.data')->with('message', array('type' => 'success', 'text' => 'User Updated Successfully.'));
+    }
+    public function downloadExcelUsersList()
+    {
+        $excel_user_list = new Reports();
+        $excel_user_list->downloadExcelUsersList();
 
     }
 }
