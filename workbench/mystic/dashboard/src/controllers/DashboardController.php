@@ -22,10 +22,10 @@ class DashboardController extends \BaseController {
 		return \View::make('dashboard::index');
 	}
 
-    public function top_nav()
-    {
-        return \View::make('dashboard::pages.tables.data');
-    }
+	 public function top_nav()
+	 {
+		return \View::make('dashboard::pages.tables.data');
+	 }
 
 
 }

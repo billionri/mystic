@@ -7,7 +7,7 @@
  */
 
 
-Route::get('/dashboard', array( 'as' => 'dashboard  ', 'uses' => 'Mystic\Dashboard\Controllers\DashboardController@showDashboard'));
+Route::get('/dashboard', array( 'as' => 'dashboard', 'uses' => 'Mystic\Dashboard\Controllers\DashboardController@showDashboard'));
 //Route::get('top_nav/', array( 'as' => 'pages.layout.top_nav', 'uses' => 'Mystic\Dashboard\Controllers\DashboardController@top_nav'));
 Route::get('data/', array( 'as' => 'pages.layout.data', 'uses' => 'Mystic\Dashboard\Controllers\DashboardController@top_nav'));
 Route::get('/mystic/list', array('as' => 'mystic_list', 'uses' => 'Mystic\Listusers\Controllers\ListusersController@mystic_list'));
